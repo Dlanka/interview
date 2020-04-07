@@ -1,0 +1,42 @@
+@import './../../styles/variables.scss';
+
+.cal-container {
+    max-width: 320px;
+    width    : 320px;
+    padding  : 15px;
+
+    .cal-inner {
+        display         : flex;
+        flex-direction  : column;
+        flex            : 0 0 100%;
+        background-color: $cal-inner-bg;
+    }
+
+    .cal-result-container {
+        display       : flex;
+        flex          : 0 0 100%;
+        flex-direction: column;
+    }
+
+    .cal-result {
+        width           : 100%;
+        height          : 60px;
+        background-color: $result-bg-color;
+        font-size       : $result-font-size;
+        padding         : 0 15px;
+        text-align      : right;
+        display         : flex;
+        justify-content : flex-end;
+        align-items     : center;
+        letter-spacing  : 1px;
+    }
+
+    .cal-fullresult {
+        font-size       : 14px;
+        letter-spacing  : 3px;
+        text-align      : right;
+        background-color: $result-bg-color;
+        color           : lighten($black, 60%);
+        padding         : 15px 15px 0;
+    }
+}

@@ -1,0 +1,23 @@
+$primary: rgb(141, 63, 243);
+$white  :#fff;
+$black  :#000;
+$text-1 :#000;
+
+$cal-inner-bg :#fbf8f8;
+
+$result-bg-color :#fff;
+$result-font-size:24px;
+
+$btn-color      :#fff;
+$btn-hover-color:darken(#fff, 1.5%);
+
+
+$btn-opt-bg      :#f7f1f1;
+$btn-opt-bg-hover:lighten($btn-opt-bg, 2%);
+
+$btn-clear-bg      :$btn-opt-bg;
+$btn-clear-bg-hover:lighten($btn-opt-bg, 2%);;
+
+$btn-equal-bg      :$primary;
+$btn-equal-bg-hover:lighten($btn-equal-bg, 5%);
+$btn-equal-text-color:$white;

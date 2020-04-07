@@ -1,0 +1,70 @@
+@import '../../../styles/variables.scss';
+
+.cal-keyboard-container {
+    display: flex;
+    flex   : 0 0 100%;
+
+    .cal-btn {
+        height          : 65px;
+        max-width       : 25%;
+        min-width       : 25%;
+        width           : 25%;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        border          : none;
+        outline         : 0;
+        background-color: $btn-color;
+        font-size       : 16px;
+        font-weight     : 600;
+        margin          : 0;
+        padding         : 10px;
+        cursor          : pointer;
+        border-right    : 1px solid rgba(8, 8, 8, 0.05);
+        border-bottom    : 1px solid rgba(8, 8, 8, 0.05);
+
+        &:nth-child(4n + 4) {
+            border-right-color: transparent;
+        }
+
+        &:hover {
+            background-color: $btn-hover-color;
+        }
+
+        &.btn-prat-l,
+        &.btn-prat-r,
+        &.btn-opt {
+            background-color: $btn-opt-bg;
+            color           : $black;
+
+            &:hover {
+                background-color: $btn-opt-bg-hover;
+            }
+        }
+
+        &.btn-backpace {
+            background-color: $btn-clear-bg;
+
+            &:hover {
+                background-color: $btn-clear-bg-hover;
+            }
+        }
+
+        &.btn-equal {
+            background-color: $btn-equal-bg;
+            color           : $btn-equal-text-color;
+
+            &:hover {
+                background-color: $btn-equal-bg-hover;
+            }
+        }
+    }
+
+    .cal-key-container {
+        display  : flex;
+        flex-wrap: wrap;
+        flex     : 0 0 100%;
+    }
+
+    .cal-oparators-container {}
+}
