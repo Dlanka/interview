@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import './Calculator.scss';
 import Keyboard from './Keyboard/Keyboard';
 
-import { calculateTo } from './../../helpers/Calculate';
+import { calculateTo, hasDot } from './../../helpers/Calculate';
 
 class Calculator extends Component {
 
@@ -62,10 +62,14 @@ class Calculator extends Component {
 
         else if (_key === '.') {
 
-            if (result.indexOf('.') === -1) {
+            if (!hasDot(result)) {
                 result = result + _key;
                 this.setResult(result);
             }
+            // if (result.indexOf('.') === -1) {
+            //     result = result + _key;
+            //     this.setResult(result);
+            // }
         }
 
         else if (_key === '(' || _key === ')') {

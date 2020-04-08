@@ -67,7 +67,7 @@ const solveParenthesis = calNum => {
         calNum.match(parenthesisRegx).forEach((val, i) => {
             var valArray = val.convertToArray();
             calNum = calNum.replace(val, calculate(valArray));
-            
+
         })
     }
     return calNum;
@@ -77,3 +77,8 @@ export const calculateTo = (val) => {
     return calculate(solveParenthesis(val).convertToArray());
 }
 
+export const hasDot = (val) => {
+    const rex = /[-+]|[0-9.]*/g;
+    const currentInputs = val.match(rex).filter(String)
+    return currentInputs[currentInputs.length - 1].includes('.');
+}
